@@ -1,0 +1,16 @@
+{>"layouts/master" /}
+
+{<body}
+<div class="imagesetting">
+{#games}
+   	<div class="large-3 columns book">
+  		<img src="{.cover}">
+  		<h4>{.title}</h4>
+  		<h3>{.developer}</h3>
+  		<div class="price">Buy it for <span>{.price}</span></div>
+  		<br>
+  		<a href="/games/details/{._id}" class="button small">Game Details</a>
+  	</div>
+  	{/games}
+	</div>
+{/body}

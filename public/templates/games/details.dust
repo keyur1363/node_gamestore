@@ -1,0 +1,23 @@
+﻿{>"layouts/master" /}
+
+{<body}
+  	<div class="large-4 columns game">
+  	   <img src="{game.cover}">
+  	</div>
+  	<div class="large-8 columns game">
+  		<h2>{game.title}</h2>
+      <ul class="gameInfo">
+        <li>Category: {game.category}</li>
+        <li>Developer: {game.developer}</li>
+        <li>Platform: {game.platform}</li>
+		<li>Description:{game.description}</li>
+    </ul>
+    <br>
+    <div class="price"><span>${game.price}</span></div>
+    <br>
+  <form method="post" action="/cart/{game._id}">
+    <input type="submit" class="button success" value="Add To Cart">
+    <input type="hidden" value="{_csrf}" name="_csrf">
+    </form>
+  	</div>
+{/body}
